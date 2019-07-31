@@ -1,4 +1,5 @@
-# learn-vuex
+# vuex-playlist
+Simple playlists app that use vuex as a central stores. This project made for practice purposes.
 
 ## Project setup
 ```
