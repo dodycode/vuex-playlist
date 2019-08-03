@@ -7,6 +7,7 @@
             <span class="price">${{ product.price }}</span>
         </li>
     </ul>
+    <button v-on:click="reducePrice">Reduce Price</button>
   </div>
 </template>
 
@@ -15,7 +16,12 @@
 export default {
   computed: {
     products() {
-      return this.$store.getters.editedProducts;
+        return this.$store.getters.editedProducts;
+    }
+  },
+  methods: {
+    reducePrice() {
+        this.$store.commit('reducePriceMutation');
     }
   }
 }
