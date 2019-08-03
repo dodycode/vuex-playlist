@@ -12,17 +12,18 @@
 </template>
 
 <script>
+import {mapGetters, mapActions} from 'vuex';
 
 export default {
   computed: {
-    products() {
-        return this.$store.getters.editedProducts;
-    }
+    ...mapGetters({
+        products: 'editedProducts'
+    })
   },
   methods: {
-    reducePrice() {
-        this.$store.dispatch('reducePriceAction');
-    }
+    ...mapActions({
+        reducePrice: 'reducePriceAction'
+    })
   }
 }
 </script>
