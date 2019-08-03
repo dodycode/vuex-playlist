@@ -31,5 +31,10 @@ export const store = new Vuex.Store({
 				product.price -= 1;
 			});
 		}
+	},
+	actions: {
+		reducePriceAction: context => {
+			context.commit('reducePriceMutation');
+		}
 	}
 });
